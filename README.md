@@ -67,11 +67,9 @@ https://<ec_instance_ip>/api/search/v1/data.json?category=Tools&facet=sentiment&
 
 
 ## FILTERING YOUR SEARCH
-Use filters to narrow the scope of your search. You can specify the fields and the values that your query will be filtered on. The Article Search API uses Elasticsearch so the filter query (fq) uses standard Lucene syntax. Separate the filter field name and value with a colon and surround multiple values with parentheses.
+Use filters to narrow the scope of your search. You can specify the fields and the values that your query will be filtered on.
 
-Filter Query Examples
-Restrict your review with The New York Times as the source:
-
+Filter Query Parameters
 
 * starRating
 * helpfulVotes
@@ -84,8 +82,7 @@ Restrict your review with The New York Times as the source:
 USING FACETS
 Use facets to view the aggregates of the search terms.
 
-The following fields can be used as facet fields: avg, sentiment, max, min
-
+The following fields can be used as facet fields: `avg, sentiment, max, min`
 
 Specify facets using the facet parameter. Set facet=<field> and the response will contain an array with a count for the top 3 terms that have the highest count for each facet.
 
