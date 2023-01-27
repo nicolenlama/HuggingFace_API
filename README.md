@@ -13,7 +13,8 @@ Use the Hugging Face Amazon US API to look up reviews by keyword. You can refine
 Must specify category in the URL
 
 Example Call
-https://<ec_instance_ip>/api/search/v1/data.json?category=Tools&facet=sentiment&starRating=2&api-key={my_token}
+
+`https://<ec_instance_ip>/api/search/v1/data.json?category=Tools&facet=sentiment&starRating=2&api-key={my_token}`
 
 
 **Categories**
@@ -82,14 +83,19 @@ Filter Query Parameters
 USING FACETS
 Use facets to view the aggregates of the search terms.
 
-The following fields can be used as facet fields: `avg, sentiment, max, min`
+The following fields can be used as facet fields: 
+* avg 
+* sentiment
+* max
+* min
 
 Specify facets using the facet parameter. Set facet=<field> and the response will contain an array with a count for the top 3 terms that have the highest count for each facet.
 
 Query with aggregates average and sentiment:
-https://<ec_instance_ip>/api/search/v1/data.json?category={cat}&facet=avg&facet=sentiment&api-key={my_token}
-By default facet counts ignore all filters and return the count for all results of a query. 
 
+`https://<ec_instance_ip>/api/search/v1/data.json?category={cat}&facet=avg&facet=sentiment&api-key={my_token}`
+
+By default facet counts ignore all filters and return the count for all results of a query. 
 
 Here is the facet array response to the query.
 
@@ -112,7 +118,8 @@ verified_purchase    0.0
       ...
 Examples Requests
 Search for documents containing new york times and return results 20-29 with results sorted oldest first.
-https://<ec_instance_ip>/api/search/v1/data.json?category={cat}&facet=avg&facet=max&facet=min&facet=sentiment&starRating={star}&api-key={my_token}
+      
+`https://<ec_instance_ip>/api/search/v1/data.json?category={cat}&facet=avg&facet=max&facet=min&facet=sentiment&starRating={star}&api-key={my_token}`
 
 Example Response
 Here is an partial example response.
