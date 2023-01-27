@@ -80,7 +80,7 @@ Filter Query Parameters
 * category
 * reviewID
 
-USING FACETS
+## USING FACETS TO OBTAIN AGGREGATES
 Use facets to view the aggregates of the search terms.
 
 The following fields can be used as facet fields: 
@@ -116,12 +116,12 @@ vine                 0.0
 verified_purchase    0.0
 , 'sentimentScore': -0.06798941798941802}
       ...
-Examples Requests
+**Examples Requests**
 Search for documents containing new york times and return results 20-29 with results sorted oldest first.
       
 `https://<ec_instance_ip>/api/search/v1/data.json?category={cat}&facet=avg&facet=max&facet=min&facet=sentiment&starRating={star}&api-key={my_token}`
 
-Example Response
+**Example Response**
 Here is an partial example response.
 
 {
